@@ -5,4 +5,9 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+const withSass = require('@webdeb/next-styles')({
+  sass: true, // use .scss files
+  modules: true,
+})
+
+module.exports = withSass(nextConfig)
